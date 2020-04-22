@@ -1,0 +1,22 @@
+
+#spring.datasource.url=jdbc:h2:mem:testdb
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.datasource.username=sa
+#spring.datasource.password=
+#spring.h2.console.enabled=false
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    data-password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    database: h2
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+  h2:
+    console:
+      enabled: true
