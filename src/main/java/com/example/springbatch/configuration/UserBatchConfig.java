@@ -16,19 +16,19 @@ import java.util.List;
 @EnableBatchProcessing
 public class UserBatchConfig {
 
-    @Bean
-    public Job inActiveUserJob(JobBuilderFactory jobBuilderFactory, Step inactiveJobStep) {
-        return jobBuilderFactory.get("inActiveUserJob")
-                .preventRestart()
-                .start(inactiveJobStep)
-                .start(inactiveJobStep)
-                .build();
-    }
+//    @Bean
+//    public Job inActiveUserJob(JobBuilderFactory jobBuilderFactory, Step inactiveJobStep) {
+//        return jobBuilderFactory.get("inActiveUserJob")
+//                .preventRestart()
+//                .start(inactiveJobStep)
+//                .start(inactiveJobStep)
+//                .build();
+//    }
 
-    @Bean
-    public Job inActiveJobStep(StepBuilderFactory stepBuilderFactory) {
-        return stepBuilderFactory.get("inActiveUserStep")
-                .<User, User> chunk(10)
-
-    }
+//    @Bean
+//    public Job inActiveJobStep(StepBuilderFactory stepBuilderFactory) {
+//        return stepBuilderFactory.get("inActiveUserStep")
+//                .<User, User> chunk(10)
+//
+//    }
 }
