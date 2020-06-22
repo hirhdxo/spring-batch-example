@@ -11,6 +11,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 //@Profile("test")
 @SpringBootTest
+
 class SpringbatchApplicationTests {
 
 //    @Autowired

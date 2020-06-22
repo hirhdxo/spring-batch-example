@@ -7,6 +7,8 @@ import org.springframework.batch.core.configuration.annotation.EnableBatchProces
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepScope;
+import org.springframework.batch.item.ItemReader;
+import org.springframework.batch.item.database.JpaPagingItemReader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -24,11 +26,18 @@ public class UserBatchConfig {
 //                .start(inactiveJobStep)
 //                .build();
 //    }
-
+//
 //    @Bean
 //    public Job inActiveJobStep(StepBuilderFactory stepBuilderFactory) {
 //        return stepBuilderFactory.get("inActiveUserStep")
 //                .<User, User> chunk(10)
+//                .reader()
 //
 //    }
+
+    @Bean
+    @StepScope
+    public JpaPagingItemReader<User> inactiveUserReader() {
+
+    }
 }

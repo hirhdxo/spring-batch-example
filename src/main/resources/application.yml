@@ -7,16 +7,20 @@
 
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
+    #url: jdbc:h2:mem:testdb #JDBC URL : jdbc:h2:mem:testdb
+    url: jdbc:h2:file:./test_db;AUTO_SERVER=TRUE
     driver-class-name: org.h2.Driver
     username: sa
     data-password:
+    initialization-mode: never
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     database: h2
     hibernate:
-      ddl-auto: create
-    generate-ddl: true
+      ddl-auto: update
   h2:
     console:
       enabled: true
+  batch:
+    job:
+      names: ${job.name:NONE}
