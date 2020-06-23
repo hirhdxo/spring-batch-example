@@ -35,9 +35,9 @@ public class UserBatchConfig {
 //
 //    }
 
-    @Bean
-    @StepScope
-    public JpaPagingItemReader<User> inactiveUserReader() {
-
-    }
+//    @Bean
+//    @StepScope
+//    public JpaPagingItemReader<User> inactiveUserReader() {
+//
+//    }
 }
